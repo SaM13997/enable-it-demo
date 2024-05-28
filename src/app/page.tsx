@@ -31,7 +31,7 @@ export default async function Home({ searchParams }: { searchParams: any }) {
             }}>
 							<a
 								className=""
-								href={`http://localhost:3000?page=${i + parseInt(pageNumber)}`}
+								href={`/?page=${i + parseInt(pageNumber)}`}
 							>
 								{i + parseInt(pageNumber)}
 							</a>
@@ -39,7 +39,7 @@ export default async function Home({ searchParams }: { searchParams: any }) {
 					))}
 				</div>
 				<a
-					href={`http://localhost:3000?page=${parseInt(pageNumber) + 1}`}
+					href={`/?page=${parseInt(pageNumber) + 1}`}
 					className="px-6 py-3 bg-zinc-500"
 				>
 					Next
