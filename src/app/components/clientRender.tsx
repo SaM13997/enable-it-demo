@@ -11,8 +11,8 @@ function ClientRender({users}: {users: any}) {
   return (
 		<div ref={ref} className="flex flex-col gap-2">
 			{users.users.map((user: any) => (
-				<div className="flex relative flex-col w-full gap-2 bg-zinc-100 rounded-xl text-zinc-600 p-4 pt-10 border border-zinc-950">
-					<div className="flex gap-2">
+				<div className="flex relative flex-col w-full gap-4 bg-zinc-100 rounded-bl-none rounded-xl text-zinc-600 p-4 pt-10 border border-zinc-950">
+					<div className="flex gap-2 animate-left">
 						<img
 							className="size-12"
 							src="https://avatar.iran.liara.run/public/34"
@@ -23,12 +23,13 @@ function ClientRender({users}: {users: any}) {
 							<p>{user.JobTitle}</p>
 						</div>
 					</div>
-					<p className="bg-red-200 text-red-600 rounded-bl-lg px-2 pb-2 font-semibold absolute top-0 right-0">
+					<p className="bg-red-200 text-red-600 rounded-bl-lg px-2 pb-2 font-semibold absolute top-0 right-0 animate-in">
 						{user.Company}
 					</p>
-					<div>
+					<div className='animate-up flex flex-col gap-0'>
 						<p className="text-lg text-zinc-600">Contact</p>
-						<p>{user.EmailAddress}</p>
+						<p className='text-sm text-zinc-700'>{user.EmailAddress}</p>
+						<p className='text-sm text-zinc-700'>{user.Phone}</p>
 					</div>
 				</div>
 			))}
