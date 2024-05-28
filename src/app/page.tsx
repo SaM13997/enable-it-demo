@@ -26,7 +26,7 @@ export default async function Home({ searchParams }: { searchParams: any }) {
 				)}
 				<div className="flex">
 					{[...Array(10)].map((_, i) => (
-						<div className={`size-4 h-full border border-zinc-900 text-zinc-900 w-full bg-zinc-300 p-2`} style={{
+						<div key={i} className={`size-4 h-full border border-zinc-900 text-zinc-900 w-full bg-zinc-300 p-2`} style={{
               backgroundColor: i + parseInt(pageNumber) === parseInt(pageNumber) ? "aqua" : "white",
             }}>
 							<a
