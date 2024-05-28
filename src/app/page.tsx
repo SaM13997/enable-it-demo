@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import ClientRender from './components/clientRender'
 
 export default async function Home({ searchParams }: { searchParams: any }) {
@@ -9,7 +8,7 @@ export default async function Home({ searchParams }: { searchParams: any }) {
 	const users = await response.json()
 	return (
 		<div className="bg-zinc-900 overflow-hidden text-white h-dvh flex flex-col justify-start items-center p-4 gap-4">
-			<p>Here's the list of all the Users returned from the following URL</p>
+			<p>Here is the list of all the Users returned from the following URL</p>
 			<p>
 				https://give-me-users-forever.vercel.app/api/users/${pageNumber}/next
 			</p>
@@ -28,7 +27,7 @@ export default async function Home({ searchParams }: { searchParams: any }) {
 				<div className="flex">
 					{[...Array(10)].map((_, i) => (
 						<div className={`size-4 h-full border border-zinc-900 text-zinc-900 w-full bg-zinc-300 p-2`} style={{
-              backgroundColor: i + parseInt(pageNumber) === parseInt(pageNumber) ? 'aqua' : 'white',
+              backgroundColor: i + parseInt(pageNumber) === parseInt(pageNumber) ? "aqua" : "white",
             }}>
 							<a
 								className=""

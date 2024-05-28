@@ -11,7 +11,7 @@ function ClientRender({users}: {users: any}) {
   return (
 		<div ref={ref} className="flex flex-col gap-2">
 			{users.users.map((user: any) => (
-				<div className="flex relative flex-col w-full gap-4 bg-zinc-100 rounded-bl-none rounded-xl text-zinc-600 p-4 pt-10 border border-zinc-950">
+				<div key={user.ID} className="flex relative flex-col w-full gap-4 bg-zinc-100 rounded-bl-none rounded-xl text-zinc-600 p-4 pt-10 border border-zinc-950">
 					<div className="flex gap-2 animate-left">
 						<img
 							className="size-12"
